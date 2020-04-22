@@ -1,0 +1,16 @@
+@media (max-width:1639px) and (min-width:1315px){
+    .header-menu ul li{
+        margin-right: 30px;
+    }
+    .header-button-right{
+        margin-left: 70px;
+    }
+}
+@media (max-width:1315px) and (min-width:1200px){
+    .header-menu ul li{
+        margin-right: 21px;
+    }
+    .header-button-right{
+        margin-left: 25px;
+    }
+}

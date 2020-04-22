@@ -1,0 +1,382 @@
+/*------------------------------Подключение шрифтов-----------------------------*/
+@font-face {
+    font-family: "Formular Bold";
+    src: url("/fonts/Formular-Bold/Formular-Bold.woff2") format("woff2"),
+    url("/fonts/Formular-Bold/Formular-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Formular Light";
+    src: url("/fonts/Formular-Light/Formular-Light.woff2") format("woff2"),
+    url("/fonts/Formular-Light/Formular-Light.woff") format("woff");
+}
+@font-face {
+    font-family: "Formular Regular";
+    src: url("/fonts/Formular-Regular/Formular-Regular.woff2") format("woff2"),
+    url("/fonts/Formular-Regular/Formular-Regular.woff") format("woff");
+}
+
+/*-----------------------------------------------------------*/
+body{
+    font-family: "Formular Regular", sans-serif;
+}
+
+/*--------------------------------Header---------------------------*/
+header{
+    position: relative;
+}
+.header-main{
+    width: 100%;
+    height: 100px;
+    background-color: #226bc5;
+    box-shadow: 0px 10px 40px 0 rgba(0, 0, 0, 0.2);
+}
+.header-logo{
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    float: left;
+}
+.header-logo img{
+    width: 176px;
+    height: 56px;
+    margin-left: 40px;
+    margin-top: 21px;
+}
+.header-menu{
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    float: left;
+    padding-top: 30px;
+    margin-left: 153px;
+}
+.header-button-right{
+    display: inline-block;
+    height: 100%;
+    float: right;
+    padding-top: 35px;
+    padding-right: 40px;
+}
+.header-menu ul li{
+    display: inline-block;
+    margin-right: 48px;
+    height: 40px;
+    float: left;
+}
+.header-menu ul li a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.header-menu ul li a:hover, .header-menu ul li a:active, .header-menu ul li a:focus{
+    color: #32dbc7;
+}
+.menu-search{
+    display: block;
+    width: 24px;
+    height: 23px;
+    background: url(../images/search.svg) center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.menu-search:hover, .menu-search:active, .menu-search:focus{
+    background: url(../images/search-blue.svg) center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.menu-hamburger{
+    display: block;
+    width: 24px;
+    height: 17px;
+    background: url(../images/burger.svg) center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.menu-hamburger:hover, .menu-hamburger:active, .menu-hamburger:focus{
+    background: url(../images/burger-blue.svg) center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.menu-language{
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #4883cb;
+    margin-top: -10px;
+}
+.menu-language span{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.menu-language .active{
+    background-color: #4883cb;
+}
+.header-button-right span{
+    width: 160px;
+    height: 40px;
+    border: solid 2px #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    float: right;
+    color: #fff;
+    padding-top: 10px;
+    cursor: pointer;
+}
+/*-------------------------------Выпадающее меню----------------------------*/
+.header-hidden{
+    width: 100%;
+    height: 399px;
+    background-color: #226bc5;
+    box-shadow: inset 0px 10px 20px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    top: 100px;
+    z-index: 1000;
+}
+.header-hidden nav{
+    margin-left: 368px;
+    width: 782px;
+    margin-top: 48px;
+}
+.header-hidden ul {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+}
+.header-hidden a{
+    font-size: 14px;
+    line-height: 2.14;
+    text-align: left;
+    color: #b1d2fb;
+    text-decoration: none;
+}
+.header-hidden a:hover, .header-hidden a:active, .header-hidden a:focus{
+    color: #32dbc7;
+}
+.header-hidden a.header-menu-parent{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 3.13;
+    text-align: left;
+    color: #ffffff;
+}
+/*-----------------------------Поиск------------------------------*/
+.header-search{
+    width: 100%;
+    height: 110px;
+    background-color: #226bc5;
+    box-shadow: inset 0px 10px 20px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    top: 100px;
+    z-index: 1000;
+}
+.header-search-input{
+    width: 782px;
+    margin-left: 368px;
+    margin-top: 30px;
+    position: relative;
+}
+.header-search input{
+    width: 782px;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: inset 0px 3px 5px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 22px;
+    font-size: 14px;
+    letter-spacing: normal;
+    color: #8e969f;
+}
+.search-icon{
+    background: url(../images/search-gray.svg) center no-repeat;
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    cursor: pointer;
+}
+/*------------------------------------------Блок со слайдером---------------------------------------------*/
+.slider{
+    background-image: url(../images/bg-history.jpg);
+    background-size: 100% auto;
+    min-height: 100vh;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+.left-nav{
+    left: 41px;
+    top: 316px;
+    position: fixed;
+}
+.left-nav a{
+    display: block;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+.left-nav a.active{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #2abbf0;
+}
+.slider .content{
+    width: 100%;
+    margin-left: 369px;
+    margin-top: 120px;
+    overflow: hidden;
+    position: relative;
+}
+.slider .slider-about{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.slider .slider-about hr{
+    position: absolute;
+    width: 100%;
+    top: 183px;
+    left: 17px;
+}
+.slider-about-slider{
+    padding-top: 50px;
+    margin-top: 50px;
+}
+.slider .content h1{
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.52;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 0;
+}
+.slider-about-item{
+    padding-right: 20px;
+    position: relative;
+}
+.slider-about-item .line{
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 1px;
+    border-left: 1px solid #fff;
+    left: 27px;
+    z-index: -100;
+}
+.slider-about-item-date{
+    width: 280px;
+    height: 69px;
+    background-color: #226bc5;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.67;
+    text-align: center;
+    padding-top: 20px;
+}
+.slider-about-item-date span{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 0.94;
+}
+.slider-about-item-point{
+    width: 100%;
+    display: inline-block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 15px;
+}
+.point-blue{
+    width: 23px;
+    height: 23px;
+    display: block;
+    background-color: #226bc5;
+    border-radius: 50%;
+    padding: 9px;
+}
+.point-white{
+    width: 5px;
+    height: 5px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.slick-current .point-blue{
+    background-color: #2abbf0;
+}
+.slick-current .slider-about-item-date{
+    background-color: #2abbf0;
+}
+.slider-about-item-text{
+    background-color: #e8eef4;
+    padding: 30px;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: left;
+    color: #595c60;
+}
+.slider-about-item-text .slider-header{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+    color: #444444;
+}
+.slick-next, .slick-prev{
+    display: block!important;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 60px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    background: #fff;
+    background-image: url(../images/arrow-left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+}
+.slick-prev{
+    left: 60px;
+    width: 60px;
+    background-image: url(../images/arrow-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+}
+.slick-next:hover, .slick-next:focus{
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    background-image: url(../images/arrow-left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+}
+.slick-prev:hover, .slick-prev:focus{
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    background-image: url(../images/arrow-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+}
+.slick-prev:before, .slick-next:before {
+    content: '';
+}
